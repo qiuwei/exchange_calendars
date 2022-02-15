@@ -142,7 +142,7 @@ class CompositeCustomBusinessDay(CustomBusinessDay):
         )
 
     @apply_wraps
-    def apply(self, other):
+    def _apply(self, other):
         if isinstance(other, datetime):
             moved = 0
             remaining = self.n - moved

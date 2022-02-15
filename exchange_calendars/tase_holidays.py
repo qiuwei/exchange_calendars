@@ -222,7 +222,7 @@ class _HolidayOffset(Easter):
         pass
 
     @apply_wraps
-    def apply(self, other):
+    def _apply(self, other):
         current = self.holiday(other.year).to_pydate()
         current = datetime(current.year, current.month, current.day)
         current = localize_pydatetime(current, other.tzinfo)
